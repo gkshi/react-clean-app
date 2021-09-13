@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: $color-text-regular;
+}
+
+h1, .h1 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-h1;
+  line-height: $line-height-h1;
+  font-weight: $font-weight-semibold;
+}

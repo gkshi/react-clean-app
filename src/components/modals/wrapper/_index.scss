@@ -1,0 +1,95 @@
+@import "src/assets/scss/variables";
+
+.component.-modal {
+  max-height: 100%;
+  position: absolute;
+  // transition: $transition-modal;
+
+  &:before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+  }
+
+  .bg {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+  }
+
+  .dialog {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1010;
+    border: none;
+    padding: 20px 30px 30px;
+    background: $color-modal-bg;
+    color: $color-text-regular;
+    border-radius: $border-radius-default;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .head {
+    margin-bottom: 10px;
+  }
+
+  &.-size {
+    &-default {
+      dialog {
+        padding: 40px 40px;
+        width: 420px;
+      }
+    }
+
+    &-auto {
+      dialog {
+        padding: 40px 50px 40px;
+        width: auto;
+      }
+    }
+  }
+
+  .body {
+    .modal-title {
+      font-size: 19px;
+      line-height: 24px;
+      color: $color-text-regular;
+      font-weight: $font-weight-semibold;
+    }
+
+    .modal-subtitle {
+      margin-top: 5px;
+      font-size: 13px;
+      line-height: 16px;
+      color: $color-text-regular;
+    }
+
+    .modal-buttons {
+      margin-top: 30px;
+    }
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+  //transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+}

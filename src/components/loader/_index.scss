@@ -1,0 +1,19 @@
+.component.-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .svg {
+    animation: loader-rotate 1s infinite linear;
+  }
+}
+
+@keyframes loader-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
