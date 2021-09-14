@@ -1,6 +1,8 @@
 import React from 'react'
 import { openModal } from '../../store/modals/events'
 
+import UIButton from '../../components/ui/button'
+
 import './_index.scss'
 
 function HomePage () {
@@ -12,7 +14,7 @@ function HomePage () {
     <div className="page -home">
       <div>home page</div>
       <div>
-        <a href="#" onClick={openSampleModal}>open sample modal</a>
+        <UIButton onClick={openSampleModal}>open sample modal</UIButton>
       </div>
     </div>
   )

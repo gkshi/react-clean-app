@@ -39,6 +39,14 @@
     margin-bottom: 40px;
   }
 
+  .close {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
+
   .head {
     margin-bottom: 10px;
   }

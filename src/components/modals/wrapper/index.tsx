@@ -4,7 +4,7 @@ import { useStore } from 'effector-react'
 import { $modals } from '../../../store/modals/store'
 import { closeModal } from '../../../store/modals/events'
 import { ModalName } from '../../../store/modals/types'
-// import CrossIcon from '../../icons/cross'
+import CrossIcon from '../../icons/cross'
 
 import './_index.scss'
 
@@ -86,9 +86,9 @@ function ModalWrapper (props: ModalWrapperProps) {
       unmountOnExit>
       <div className={classList} onClick={onParentClick}>
         <dialog open className="dialog">
-          {/* {isClosable() && <div className="close" onClick={close}> */}
-          {/*  <CrossIcon/> */}
-          {/* </div>} */}
+          {isClosable() && <div className="close" onClick={close}>
+            <CrossIcon />
+          </div>}
           {props.heading && <div className="head">
             <div className="h2 flex center">{props.heading}</div>
           </div>}

@@ -1,0 +1,124 @@
+@import "../../../assets/scss/variables";
+
+.button.-component {
+  & > * {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    font-family: $font-family-default;
+    font-weight: $font-weight-medium;
+    letter-spacing: .2px;
+    text-decoration: none !important;
+
+    background: $color-primary;
+    color: $color-text-light;
+    cursor: pointer;
+    transition: $transition-button;
+
+    span {
+      display: flex;
+    }
+
+    .icon-container {
+      color: $color-text-light;
+
+      & + * {
+        margin-left: 8px;
+      }
+    }
+
+    &:hover {
+      background: $color-primary-highlight;
+    }
+
+    &:focus {
+      background: $color-primary-highlight;
+    }
+  }
+
+  .loader {
+    color: $color-text-light;
+  }
+
+  &.-theme {
+    &-default {
+      .icon-container {
+        color: $color-text-regular;
+      }
+    }
+
+    &-danger {
+      & > * {
+        background: $color-danger;
+        color: $color-text-light;
+
+        &:hover {
+          background: darken($color-danger, 5%);
+        }
+      }
+    }
+  }
+
+  &.-size {
+    &-default {
+      & > * {
+        padding: 11px 20px 12px;
+        min-height: 48px;
+        font-size: 15px;
+        line-height: 17px;
+        border-radius: $border-radius-default;
+      }
+    }
+
+    &-small {
+      & > * {
+        padding: 8px 18px 9px;
+        min-height: 40px;
+        font-size: 13px;
+        line-height: 16px;
+        border-radius: $border-radius-small;
+
+        .icon-container {
+          width: 20px;
+          height: 20px;
+          margin-left: -2px;
+
+          & + * {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &.-full-width {
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &.-loading {
+    & > * {
+      position: relative;
+      pointer-events: none;
+
+      & > * {
+        &:not(.loader) {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &.-disabled {
+    & > * {
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+}
